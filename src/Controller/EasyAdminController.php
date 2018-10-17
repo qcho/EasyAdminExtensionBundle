@@ -34,6 +34,7 @@ class EasyAdminController extends BaseEasyAdminControler
         $masterRequestUri = $removeRefererModifier->process($baseMasterRequestUri);
 
         return $this->render('@EasyAdminExtension/default/embedded_list.html.twig', [
+            'objectType' => 'entity',
             'paginator' => $paginator,
             'fields' => $fields,
             'masterRequestUri' => (string) $masterRequestUri,
